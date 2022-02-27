@@ -1,0 +1,46 @@
+body {
+  background-color: #333;
+  margin: 10rem 10rem;
+  padding: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 10rem);
+  gap: 2rem;
+}
+
+.images {
+  width: 10rem;
+}
+
+.reveal {
+  background-color: black;
+  height: 10rem;
+  width: 10rem;
+  display: block;
+  position: fixed;
+  border: none;
+}
+
+.two {
+  left: 22rem;
+}
+
+.three {
+  left: 34rem;
+}
+
+.four {
+  top: 22rem;
+}
+
+.five {
+  top: 22rem;
+  left: 22rem;
+}
+
+.six {
+  top: 22rem;
+  left: 34rem;
+}
