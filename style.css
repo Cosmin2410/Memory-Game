@@ -1,46 +1,56 @@
-body {
-  background-color: #333;
-  margin: 10rem 10rem;
+* {
+  margin: 0;
   padding: 0;
 }
 
+body {
+  background-color: #333;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 10rem;
+}
+
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 10rem);
-  gap: 2rem;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70rem;
+  height: 55rem;
+  perspective: 1000px;
 }
 
-.images {
-  width: 10rem;
+.memory-card {
+  position: relative;
+  width: 15rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
 }
 
-.reveal {
-  background-color: black;
-  height: 10rem;
-  width: 10rem;
-  display: block;
-  position: fixed;
-  border: none;
+.memory-card.flip {
+  transform: rotateY(180deg);
 }
 
-.two {
-  left: 22rem;
+.memory-card:active {
+  transform: scale(97%);
+  transition: 0.1s;
 }
 
-.three {
-  left: 34rem;
+.back-face,
+.front-face {
+  position: absolute;
+  background-color: rgb(1, 81, 202);
+  padding: 3.5rem 2rem;
+  border-radius: 10px;
+  backface-visibility: hidden;
 }
 
-.four {
-  top: 22rem;
-}
-
-.five {
-  top: 22rem;
-  left: 22rem;
-}
-
-.six {
-  top: 22rem;
-  left: 34rem;
+.back-face {
+  transform: rotateY(180deg);
 }

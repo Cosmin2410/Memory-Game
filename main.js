@@ -1,8 +1,7 @@
-let buttonRmv = document.querySelectorAll('button');
-for (let i = 0; i < buttonRmv.length; i++) {
-  buttonRmv[i].addEventListener('click', removeCard);
+let cards = document.querySelectorAll('.memory-card');
 
-  function removeCard(e) {
-    buttonRmv[i].style.display = 'none';
-  }
+cards.forEach((card) => card.addEventListener('click', flipCard));
+
+function flipCard(e) {
+  this.classList.toggle('flip');
 }
